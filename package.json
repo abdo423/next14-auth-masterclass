@@ -55,10 +55,12 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
-  "eslintConfig": {
-    "extends": "next/core-web-vitals",
-    "rules": {
-      "no-var": "off"
-    }
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+      "no-var": "off",
+      "no-restricted-syntax": ["error", {
+          "selector": "VariableDeclaration[kind='var'][declare!=true]",
+          "message": "Unexpected var, use let or const instead."
+      }]
   }
 }
