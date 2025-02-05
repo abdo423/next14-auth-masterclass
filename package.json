@@ -56,7 +56,7 @@
     "typescript": "^5"
   },
   "eslintConfig": {
-    "extends": "next",
+    "extends": "next/core-web-vitals",
     "rules": {
       "no-var": "off"
     }
